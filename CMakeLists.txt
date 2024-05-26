@@ -11,20 +11,3 @@ set(include_dest "include/")
 
 add_subdirectory(src)
 add_subdirectory(test)
-
-# Добавление Google Test
-include(FetchContent)
-FetchContent_Declare(
-    googletest
-    URL https://github.com/google/googletest/archive/refs/tags/release-1.11.0.zip
-)
-# Для выполнения обновления только один раз
-FetchContent_MakeAvailable(googletest)
-
-enable_testing()
-
-add_executable(mod-lab06-markov src/main.cpp src/textgen.cpp test/tests.cpp)
-target_link_libraries(mod-lab06-markov gtest_main)
-
-include(GoogleTest)
-gtest_discover_tests(mod-lab06-markov)
