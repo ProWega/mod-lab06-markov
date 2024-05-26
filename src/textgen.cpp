@@ -21,7 +21,7 @@ const int MAXGEN = 1000;
 typedef std::deque<std::string> prefix;
 std::map<prefix, std::vector<std::string>> statetab;
 
-void build(const std::string& filename, int NPREF=2) {
+void build(const std::string& filename, int NPREF = 2) {
     std::ifstream file(filename);
     if (!file) {
         std::cerr << "Не удается открыть файл: " << filename << std::endl;
@@ -52,7 +52,8 @@ std::string generate_text(int max_words) {
         output += word + " ";
     }
 
-    std::default_random_engine generator(static_cast<long unsigned int>(time(0)));
+    std::default_random_engine 
+	generator(static_cast<int64_t>(time(0)));
     std::uniform_int_distribution<int> distribution;
 
     for (int i = 0; i < max_words; ++i) {

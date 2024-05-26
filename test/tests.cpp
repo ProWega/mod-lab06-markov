@@ -20,7 +20,7 @@ void print_statetab() {
 TEST(TextGenTest, PrefixGeneration) {
     // Очистка таблицы
     statetab.clear();
-    
+
     // Запись тестового файла
     std::ofstream test_file("test_input.txt");
     test_file << "слово1 слово2 слово3 слово4 слово5";
@@ -30,11 +30,11 @@ TEST(TextGenTest, PrefixGeneration) {
     build("test_input.txt", 2);
     ASSERT_EQ(statetab.size(), 3);
     ASSERT_EQ(statetab[prefix({"слово1", "слово2"})],
-	std::vector<std::string>({"слово3"}));
+    std::vector<std::string>({"слово3"}));
     ASSERT_EQ(statetab[prefix({"слово2", "слово3"})],
-	std::vector<std::string>({"слово4"}));
+    std::vector<std::string>({"слово4"}));
     ASSERT_EQ(statetab[prefix({"слово3", "слово4"})],
-	std::vector<std::string>({"слово5"}));
+    std::vector<std::string>({"слово5"}));
 
     // Очистка таблицы
     statetab.clear();
@@ -43,9 +43,9 @@ TEST(TextGenTest, PrefixGeneration) {
     build("test_input.txt", 3);
     ASSERT_EQ(statetab.size(), 2);
     ASSERT_EQ(statetab[prefix({"слово1", "слово2", "слово3"})],
-	std::vector<std::string>({"слово4"}));
+    std::vector<std::string>({"слово4"}));
     ASSERT_EQ(statetab[prefix({"слово2", "слово3", "слово4"})],
-	std::vector<std::string>({"слово5"}));
+    std::vector<std::string>({"слово5"}));
 }
 
 // Тест 2: Формирование записи "префикс-суффикс"

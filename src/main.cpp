@@ -1,5 +1,5 @@
 // Copyright 2024 UNN-IASR
-#include "textgen.h"
+#include "../include/textgen.h"
 
 int main() {
     setlocale(LC_ALL, "Russian");
