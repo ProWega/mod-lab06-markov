@@ -52,8 +52,8 @@ std::string generate_text(int max_words) {
         output += word + " ";
     }
 
-    std::default_random_engine 
-	generator(static_cast<int64_t>(time(0)));
+    std::default_random_engine
+    generator(static_cast<int64_t>(time(0)));
     std::uniform_int_distribution<int> distribution;
 
     for (int i = 0; i < max_words; ++i) {
