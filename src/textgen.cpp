@@ -2,7 +2,7 @@
 #ifndef INCLUDE_TEXTGEN_H_
 #define INCLUDE_TEXTGEN_H_
 
-#include "textgen.h"
+#include "../include/textgen.h"
 #include <iostream>
 #include <fstream>
 #include <sstream>
