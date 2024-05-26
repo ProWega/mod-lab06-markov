@@ -23,8 +23,8 @@ FetchContent_MakeAvailable(googletest)
 
 enable_testing()
 
-add_executable(TextGenerator src/main.cpp src/textgen.cpp test/tests.cpp)
-target_link_libraries(TextGenerator gtest_main)
+add_executable(mod-lab06-markov src/main.cpp src/textgen.cpp test/tests.cpp)
+target_link_libraries(mod-lab06-markov gtest_main)
 
 include(GoogleTest)
-gtest_discover_tests(TextGenerator)
+gtest_discover_tests(mod-lab06-markov)
