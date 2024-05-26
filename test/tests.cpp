@@ -22,12 +22,12 @@ TEST(TextGenTest, PrefixGeneration) {
     statetab.clear();
 
     // Запись тестового файла
-    std::ofstream test_file("input.txt");
+    std::ofstream test_file("test_input.txt");
     test_file << "слово1 слово2 слово3 слово4 слово5";
     test_file.close();
 
     // Проверка для NPREF = 2
-    build("../src/input.txt", 2);
+    build("test_input.txt", 2);
     ASSERT_EQ(statetab.size(), 3);
     ASSERT_EQ(statetab[prefix({"слово1", "слово2"})],
     std::vector<std::string>({"слово3"}));
